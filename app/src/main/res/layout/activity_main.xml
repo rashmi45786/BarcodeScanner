@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/images" />
+
+    <Button
+        android:id="@+id/btnLaunchCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Camera"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/image"
+        android:onClick="requestForCameraPermission"/>
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLaunchCamera"
+        android:text="Result "
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDesc"
+        android:fillViewport="true">
+
+
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/txtDesc"
+            android:textColor="#000000"
+            android:visibility="gone" />
+
+    </ScrollView>
+
+
+</RelativeLayout>
